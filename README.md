@@ -69,7 +69,7 @@ craftpainting beach.png -s 3x2 -o painting_beach.png
   <img src="https://raw.githubusercontent.com/ninest/craftpainting/master/images/beach.png" alt="beach" width="300">
 </p>
 
-### code
+### Code
 ```bash
 craftpainting code.jpg -s 2x2 -o painting_code.jpg
 ```

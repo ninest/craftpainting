@@ -10,7 +10,7 @@ flask = "*"
 gunicorn = "*"
 pillow = "*"
 numpy = "*"
-craftpainting = {path = "./../src"}
+craftpainting = "*"
 
 [requires]
 python_version = "3.7"

@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "8ba9e5415b59c9545fb3b30d9e5c90fc7ec06173615f9ff697e04e0cf2daa660"
+            "sha256": "a662a04a7baacba78a89c7ee33e8ccd907a66c7d9f872588409bc8b9d9ffb641"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -24,7 +24,12 @@
             "version": "==7.1.2"
         },
         "craftpainting": {
-            "path": "./../src"
+            "hashes": [
+                "sha256:8b7783c927eebea55478960a68827e23638c2ba83acb45e131794d8ceed8637e",
+                "sha256:96c0e8e566185423ef84b5ee25bed28e9145ef27ca7206cb0335a2f923043a7a"
+            ],
+            "index": "pypi",
+            "version": "==0.0.1"
         },
         "flask": {
             "hashes": [

@@ -2,23 +2,42 @@
 
 {% block body %}
   <form action="/create_painting" method="post" enctype="multipart/form-data">
-    <!-- image upload -->
-    <label for="image">Image</label>
-    <input type="file" name="image">
+    <section>
+      <h2>Image</h2>
+      <p>Upload an image</p>
+      <!-- image upload -->
+      <div>
+        <!-- <label for="image">Image</label> -->
+        <input type="file" name="image" required>
+      </div>
+    </section>
+    
+    <section>
+      <h2>Size</h2>
+      <p>Enter the size in Minecraft blocks. If left empty, we'll try to guess an appropriate value for you!</p>
+      <!-- image width -->
+      <div>
+        <label class="size" for="width">Width</label>
+        <input name="width" type="number">
+      </div>
 
-    <!-- image width -->
-    <label for="width">Width</label>
-    <input name="width" type="number" value="1">
+      <!-- image height -->
+      <div>
+        <label class="size" for="height">Height</label>
+        <input name="height" type="number">
+      </div>
+    </section>
 
-    <!-- image height -->
-    <label for="height">Height</label>
-    <input name="height" type="number" value="1">
-
-    <!-- black and white? -->
-    <label for="bw">Black and white</label>
-    <input type="checkbox" name="bw">
+    <section>
+      <h2>Other options</h2>
+      <!-- black and white? -->
+      <div>
+        <input type="checkbox" name="bw">
+        <label for="bw">Black and white</label>
+      </div>
+    </section>
 
     <!-- submit -->
-    <button type="submit">submit</button>
+    <button type="submit">Create painting</button>
   </form>
 {% endblock %}

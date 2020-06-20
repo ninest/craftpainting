@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0; 
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 19px;
+  /* "Press Start 2P",  */
+  font-family:"Inter", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.7;
+}
+
+@media only screen and (max-width: 700px) {
+  /* Mobile styles */
+  html,
+  body {
+    font-size: 16px;
+  }
+}

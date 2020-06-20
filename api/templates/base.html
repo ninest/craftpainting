@@ -5,12 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Styling -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="{{ url_for('static', filename='normalize.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
   <title>Craftpainting</title>
 </head>
 <body>
-  {% block body %}{% endblock %}
+  <main>
+    <h1>Craftpainting</h1>
+    {% block body %}{% endblock %}
+  </main>
   {% block scripts %}{% endblock %}
 </body>
 </html>

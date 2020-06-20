@@ -5,8 +5,13 @@ with open('../README.md') as readme_file:
 
 setuptools.setup(
     name='craftpainting',
-    version='0.0.1',
+    version='0.0.2',
     packages=setuptools.find_packages(),
+    entry_points={
+      'console_scripts': [
+        'craftpainting = craftpainting.__main__:main'
+      ]
+    },
     license='MIT',
     url='https://github.com/ninest/craftpainting',
     project_urls={

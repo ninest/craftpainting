@@ -2,7 +2,12 @@
 <p align="center">Create Minecraft-like paintings in the terminal</p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Made%20With-Python-black?style=flat-square&" alt="Made with Python" />
+  <a href="https://pypi.org/project/craftpainting/">
+    <img src="https://img.shields.io/pypi/v/craftpainting?color=blue&style=flat-square" alt="Version" />
+  </a>
+  <a href="https://pypi.org/project/craftpainting/">
+    <img alt="PyPI - Downloads" src="https://img.shields.io/pypi/dm/craftpainting?color=red&style=flat-square" />
+  </a>
   <a href="http://makeapullrequest.com/"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="Make a PR" /></a>
   <img src="https://img.shields.io/github/license/ninest/craftpainting?style=flat-square" alt="MIT" />
   <a href="https://www.buymeacoffee.com/ninest">

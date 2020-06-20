@@ -11,17 +11,71 @@
 </p>
 
 <p align="center">
-
-  <!-- <img src="> -->
-
+  <img src="https://raw.githubusercontent.com/ninest/craftpainting/master/images/painting_sunset_dense.jpg" alt="sunset dense" width="500">
 </p>
 
 
 ## 🚀 Usage
 
 ```bash
-craftpainting input.png -o output.png
+craftpainting input_path.png -s SIZE -r REPETITIONS -o output_path.png 
 ```
+
+### size
+Enter a string of `WxH`, such as `2x1`. Units are Minecraft blocks, so a width of `2x1` translates to an image of `32x16`.
+
+### repetitions
+The number of times enlarge the image. By default, an image `32x16` or `48x32` is too small and doesn't look good.
+
+The value of `-r` dictates how many times each pixel should be multiplied. It's `15` by default, so an image of size `2x1` in blocks looks like it's `32x16` pixels, but is actually `480x240`.
+
+Set to `0` to get the minimum possible size.
+
+### gray
+Append `-g` (or `--gray`) to the command to make the painting black and white.
+
+### outputpath
+If no output path is specified, the image will be shown, but won't be saved.
+
+## 🏳️‍🌈 Examples
+### Sunset dense
+```bash
+craftpainting sunset_dense.jpg -o painting_sunset_dense.jpg
+```
+<p align="center">
+  <img src="https://raw.githubusercontent.com/ninest/craftpainting/master/images/painting_sunset_dense.jpg" alt="sunset dense" width="300">
+</p>
+
+#### Original
+<p align="center">
+  <img src="https://raw.githubusercontent.com/ninest/craftpainting/master/images/sunset_dense.jpg" alt="sunset dense" width="300">
+</p>
+
+### Beach
+```bash
+craftpainting beach.png -s 3x2 -o painting_beach.png
+```
+<p align="center">
+  <img src="https://raw.githubusercontent.com/ninest/craftpainting/master/images/painting_beach.png" alt="beach" width="300">
+</p>
+
+#### Original
+<p align="center">
+  <img src="https://raw.githubusercontent.com/ninest/craftpainting/master/images/beach.png" alt="beach" width="300">
+</p>
+
+### code
+```bash
+craftpainting code.jpg -s 2x2 -o painting_code.jpg
+```
+<p align="center">
+  <img src="https://raw.githubusercontent.com/ninest/craftpainting/master/images/code.jpg" alt="code" width="300">
+</p>
+
+#### Original
+<p align="center">
+  <img src="https://raw.githubusercontent.com/ninest/craftpainting/master/images/painting_code.jpg" alt="code" width="300">
+</p>
 
 ## 🛠 Build setup
 

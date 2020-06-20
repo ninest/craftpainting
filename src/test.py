@@ -1,5 +1,18 @@
 from craftpainting.painting import create_painting
+from craftpainting.enlarge import enlarge_image
+from PIL import Image
 
-p = create_painting('https://live.staticflickr.com/967/28289693978_37b42a56a8_b.jpg')
+p = create_painting('images/cat.jpeg')
+p = enlarge_image(p, repetitions=20)
 p.show()
+# import numpy as np
 
+# a = np.array([
+#   [1,2,3],
+#   [4,5,6],
+#   [7,8,9],
+# ])
+
+# a = np.repeat(a, 10, axis=0)
+# a = np.repeat(a, 10, axis=1)
+# print(a)

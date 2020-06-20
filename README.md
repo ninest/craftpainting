@@ -69,13 +69,14 @@ craftpainting beach.png -s 3x2 -o painting_beach.png
 craftpainting code.jpg -s 2x2 -o painting_code.jpg
 ```
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ninest/craftpainting/master/images/code.jpg" alt="code" width="300">
+  <img src="https://raw.githubusercontent.com/ninest/craftpainting/master/images/painting_code.jpg" alt="code" width="300">
 </p>
 
 #### Original
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ninest/craftpainting/master/images/painting_code.jpg" alt="code" width="300">
+  <img src="https://raw.githubusercontent.com/ninest/craftpainting/master/images/code.jpg" alt="code" width="300">
 </p>
+
 
 ### Landscape
 ```bash
@@ -83,15 +84,15 @@ craftpainting landscape.jpg -g -r 5 -o painting_landscape.jpg
 ```
 
 Smaller values of `repetitions` produce images of smaller sizes.
-
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ninest/craftpainting/master/images/landscape.jpg" alt="code" width="300">
+  <img src="https://raw.githubusercontent.com/ninest/craftpainting/master/images/painting_landscape.jpg" alt="code" width="300">
 </p>
 
 #### Original
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ninest/craftpainting/master/images/painting_landscape.jpg" alt="code" width="300">
+  <img src="https://raw.githubusercontent.com/ninest/craftpainting/master/images/landscape.jpg" alt="code" width="300">
 </p>
+
 
 ## 🛠 Build setup
 

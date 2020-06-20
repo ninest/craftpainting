@@ -6,14 +6,30 @@ BLOCK_SIZE = 16
 
 # list of colors for the frame (all browns)
 FRAME_COLORS = [
-    # (44, 38, 32),
     (67, 61, 49),
     (68, 58, 48)
 ]
 
 
-def create_painting(image_path, size, gray=False, border=False):
+def create_painting(image_path, size=None, gray=False, border=False):
   image = Image.open(image_path)
+
+  if size is None:
+    # try to detect what the size should be if it's not provided
+    image_width, image_height = image.size
+    ratio = image_width / image_height
+
+    print(ratio)
+
+    if ratio > 1.33:
+      size = (2, 1)
+    elif ratio < 0.75:
+      size = (1, 2)
+    else:
+      size = (1, 1)
+
+  # convert the size from block to pixels
+  size = size[0] * BLOCK_SIZE, size[1] * BLOCK_SIZE
 
   if border:
     # create a brown image

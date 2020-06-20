@@ -104,7 +104,9 @@ pipenv install
 <!-- ## 😱 Issues and limitations -->
 
 ## 📜 License
-MIT
+- MIT
+- Sunset Dense taken from [Minecraft Gamepedia](https://minecraft.gamepedia.com/Painting)
+- Some images taken from [Pexels](https://www.pexels.com/)
 
 <!-- ## 🔖 Legal attribution -->
 <!-- Google Play and the Google Play logo are trademarks of Google LLC. -->

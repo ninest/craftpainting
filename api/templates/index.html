@@ -14,7 +14,7 @@
     
     <section>
       <h2>Size</h2>
-      <p>Enter the size in Minecraft blocks. If left empty, we'll try to guess an appropriate value for you!</p>
+      <p>Enter the size in <b>Minecraft blocks</b>. If left empty, we'll try to guess an appropriate value for you!</p>
       <!-- image width -->
       <div>
         <label class="size" for="width">Width</label>
@@ -35,9 +35,13 @@
         <input type="checkbox" name="bw">
         <label for="bw">Black and white</label>
       </div>
+      <div>
+        <input type="checkbox" name="frame" checked>
+        <label for="frame">Include photo frame</label>
+      </div>
     </section>
 
     <!-- submit -->
-    <button type="submit">Create painting</button>
+    <button class="fancy-font" type="submit">Create painting</button>
   </form>
 {% endblock %}

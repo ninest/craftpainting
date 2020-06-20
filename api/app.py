@@ -17,13 +17,26 @@ def index():
 
 @app.route('/create_painting', methods=['POST'])
 def create():
-  print(request.form)
-  print(request.files['image'])
+  width = request.form['width']
+  height = request.form['height']
+  gray = request.form.getlist('bw')
+  frame = request.form.getlist('frame')
+
+  # set size
+  if not width or not height:
+    size = None
+  else:
+    size = (int(width), int(height))
+
+  if "on" in gray: gray = True
+  else: gray = False
+  if "on" in frame: frame = True
+  else: frame = False
 
   image_from_form = request.files['image']
   image = Image.open(image_from_form)
-  # image.show()
-  painting = create_painting(image)
+
+  painting = create_painting(image, size=size, gray=gray, border=frame)
   painting = enlarge_image(painting, repetitions=20)
 
   # file object in memory

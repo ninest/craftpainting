@@ -1,9 +1,9 @@
 from PIL import Image
 import numpy as np
 import random
-import requests
+# import requests
 from io import BytesIO
-import validators
+# import validators
 
 BLOCK_SIZE = 16
 
@@ -14,13 +14,13 @@ FRAME_COLORS = [
 ]
 
 
-def create_painting(image_path, size=None, gray=False, border=True):
+def create_painting(image, size=None, gray=False, border=True):
   # image path can be from internet too
-  if validators.url(image_path):
-    response = requests.get(image_path)
-    image = Image.open(BytesIO(response.content))
-  else:
-    image = Image.open(image_path)
+  # if validators.url(image_path):
+  #   response = requests.get(image_path)
+  #   image = Image.open(BytesIO(response.content))
+  # else:
+  #   image = Image.open(image_path)
 
   if size is None:
     # try to detect what the size should be if it's not provided

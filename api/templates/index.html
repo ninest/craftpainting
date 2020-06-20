@@ -1,14 +1,24 @@
-<body>
-  <form action="/create_painting" method="post" enctype="multipart/form-data">
-    <label for="width">Width</label>
-    <input name="width" type="number">
+{% extends "base.html" %}
 
-    <label for="height">Height</label>
-    <input name="height" type="number">
-    
+{% block body %}
+  <form action="/create_painting" method="post" enctype="multipart/form-data">
+    <!-- image upload -->
     <label for="image">Image</label>
     <input type="file" name="image">
 
+    <!-- image width -->
+    <label for="width">Width</label>
+    <input name="width" type="number" value="1">
+
+    <!-- image height -->
+    <label for="height">Height</label>
+    <input name="height" type="number" value="1">
+
+    <!-- black and white? -->
+    <label for="bw">Black and white</label>
+    <input type="checkbox" name="bw">
+
+    <!-- submit -->
     <button type="submit">submit</button>
   </form>
-</body>
+{% endblock %}

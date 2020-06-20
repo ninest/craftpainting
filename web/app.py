@@ -1,4 +1,4 @@
-# git subtree push --prefix api heroku master
+# git subtree push --prefix web heroku master
 from flask import Flask, render_template, request, send_file
 from PIL import Image
 import io

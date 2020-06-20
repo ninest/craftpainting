@@ -39,6 +39,10 @@ def create_painting(image_path, size=None, gray=False, border=True):
   # convert the size from block to pixels
   image_size = size[0] * BLOCK_SIZE, size[1] * BLOCK_SIZE
 
+  # black and white images optional
+  if gray:
+    image = image.convert(mode='L')
+
   if border:
     # create a brown image
     parent_image = Image.new('RGB', image_size)
@@ -63,9 +67,5 @@ def create_painting(image_path, size=None, gray=False, border=True):
   else:
     # no border, just resize image
     image = image.resize(image_size, Image.ANTIALIAS)
-
-  # black and white images optional
-  if gray:
-    image = image.convert(mode='L')
 
   return image

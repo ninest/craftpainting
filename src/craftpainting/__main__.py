@@ -19,9 +19,12 @@ height = int(args.size.split('x')[1])
 painting = create_painting(args.imagepath, size=(width, height), gray=args.gray)
 
 if args.repeat != 0:
+  # repeat = 0 means that the image should be its original size (just like actual minecraft textures)
   painting = enlarge_image(painting, repetitions=args.repeat)
 
 if args.outputpath:
+  # only save the image if an output path is specified
   painting.save(args.outputpath)
 else:
+  # otherwise just diplay theimage
   painting.show()

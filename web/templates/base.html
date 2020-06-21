@@ -6,10 +6,11 @@
 
   <!-- Styling -->
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-
+  
   <link rel="stylesheet" href="{{ url_for('static', filename='normalize.css') }}">
-  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  {% assets "scss_all" %}
+    <link rel="stylesheet" href="/static/gen/all.css">
+  {% endassets %}
 
   <title>Craftpainting</title>
 </head>

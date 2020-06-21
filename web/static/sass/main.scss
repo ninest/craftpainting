@@ -15,15 +15,5 @@ body {
   line-height: 1.7;
 }
 
-.fancy-font {
-  font-family: "Press Start 2P", "Inter", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif;
-}
 
-@media only screen and (max-width: 700px) {
-  /* Mobile styles */
-  html,
-  body {
-    font-size: 16px;
-  }
-}
+

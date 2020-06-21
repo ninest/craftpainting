@@ -1,0 +1,32 @@
+@import "screen.scss";
+@import "variables.scss";
+
+main {
+  margin: 1.5em 20%;
+  @include mobile-screen {
+    margin: 1em 7%;
+  }
+
+  h1 {
+    font-size: 1.5em;
+    font-family: $fancy-font;
+  }
+
+  section {
+    p {
+      color: rgba(0, 0, 0, 0.7);
+    }
+    
+    div {
+      margin-top: 0.7em;
+      label {
+        font-weight: 400;
+        &.size {
+          display: inline-block;
+          width: 6em;
+        }
+      }
+    }
+    margin-bottom: 1em;
+  }
+}

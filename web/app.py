@@ -1,5 +1,6 @@
 # git subtree push --prefix web heroku master
 from flask import Flask, render_template, request, send_file
+from flask_assets import Environment, Bundle
 from PIL import Image
 import io
 import base64
@@ -8,6 +9,13 @@ from craftpainting.enlarge import enlarge_image
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'uploads'
+
+assets = Environment(app)
+assets.url = app.static_url_path
+assets.debug = True
+
+scss = Bundle('sass/main.scss','sass/form.scss', 'sass/inputs.scss', filters='pyscss', output='gen/all.css')
+assets.register('scss_all', scss)
 
 
 @app.route('/')

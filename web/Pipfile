@@ -11,6 +11,8 @@ gunicorn = "*"
 pillow = "*"
 numpy = "*"
 craftpainting = "*"
+flask-assets = "*"
+pyscss = "*"
 
 [requires]
 python_version = "3.7"

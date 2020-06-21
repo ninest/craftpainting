@@ -12,25 +12,25 @@ main {
 
 h1 {
   font-weight: 900;
+  font-size: 1.5em;
 }
-
-form div {
-  margin-top: 0.7em;
-  margin-bottom: 1em;
-}
-  label {
-    font-weight: 400;
-  }
-  label.size {
-    display: inline-block;
-    width: 6em;
-  }
 
 section {}
   h2 {}
   p { 
     color: rgba(0, 0, 0, 0.7);
   }
+  div {
+    margin-top: 0.7em;
+    margin-bottom: 1em;
+  }
+    label {
+      font-weight: 400;
+    }
+    label.size {
+      display: inline-block;
+      width: 6em;
+    }
 
 input[type=text], input[type=number] {
   padding: 0.3em;

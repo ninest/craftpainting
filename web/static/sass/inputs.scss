@@ -1,0 +1,22 @@
+@import "variables.scss";
+
+input[type="text"],
+input[type="number"] {
+  padding: 0.3em;
+  border: 2px solid rgba(0, 0, 0, 0.4);
+
+  &:focus {
+    outline: none;
+    border: 2px solid blue;
+  }
+}
+
+button {
+  font-family: $fancy-font;
+  margin-top: 1em;
+  background-color: black;
+  color: white;
+  padding: 0.5em 1em;
+  font-weight: 600;
+  border: none;
+}

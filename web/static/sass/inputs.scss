@@ -12,10 +12,10 @@ input[type="number"] {
 }
 
 button, a.button {
-
+  display: inline-block;
   margin-top: 1em;
   font-family: $fancy-font;
-  font-size: 0.8em;
+  font-size: 0.7em;
   font-weight: 600;
 
   color: white;

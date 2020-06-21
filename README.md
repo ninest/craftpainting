@@ -21,26 +21,46 @@
 
 
 ## 🚀 Usage
-
+### CLI
 ```bash
 craftpainting input_path.png -s SIZE -r REPETITIONS -o output_path.png 
 ```
 
-### size
+#### size
 Enter a string of `WxH`, such as `2x1`. Units are Minecraft blocks, so a width of `2x1` translates to an image of `32x16`.
 
-### repetitions
+#### repetitions
 The number of times enlarge the image. By default, an image `32x16` or `48x32` is too small and doesn't look good.
 
 The value of `-r` dictates how many times each pixel should be multiplied. It's `15` by default, so an image of size `2x1` in blocks looks like it's `32x16` pixels, but is actually `480x240`.
 
 Set to `0` to get the minimum possible size.
 
-### gray
+#### gray
 Append `-g` (or `--gray`) to the command to make the painting black and white.
 
-### outputpath
+#### outputpath
 If no output path is specified, the image will be shown, but won't be saved.
+
+### Python
+```python
+from craftpainting import create_painting, enlarge_image
+from PIL import Image
+
+image = Image.open('images/sunset_dense.jpg')
+p = create_painting(image)  # create the (super tiny) image
+p = enlarge_image(p, repetitions=15)  # enlarge it so it looks better
+p.show()
+```
+
+### Web
+Visit [craftpainting.herokuapp.com](https://craftpainting.herokuapp.com/).
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/ninest/craftpainting/master/images/cpweb.png" alt="web demo" width="500">
+</p>
+
+*Note: the website is hosted on Heroku on the free plan, so it will take around 10 seconds to load.*
 
 ## 🏳️‍🌈 Examples
 ### Sunset dense
@@ -102,9 +122,13 @@ Smaller values of `repetitions` produce images of smaller sizes.
 ## 🛠 Build setup
 
 ```bash
+# install all packages
 cd src/
 pipenv shell
 pipenv install
+
+# run test.py
+python test.py
 ```
 
 <!-- ## 😱 Issues and limitations -->

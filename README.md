@@ -21,6 +21,16 @@
 
 
 ## 🚀 Usage
+
+Install it by running
+
+```bash
+pip install craftpainting
+
+# on on mac,
+pip3 install craftpainting
+```
+
 ### CLI
 ```bash
 craftpainting input_path.png -s SIZE -r REPETITIONS -o output_path.png 
@@ -53,11 +63,20 @@ p = enlarge_image(p, repetitions=15)  # enlarge it so it looks better
 p.show()
 ```
 
+To use in Python, Pillow is required. Install it:
+
+```bash
+pip install pillow
+
+# or on mac,
+pip3 install pillow
+```
+
 ### Web
 Visit [craftpainting.herokuapp.com](https://craftpainting.herokuapp.com/).
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ninest/craftpainting/master/images/cpweb.png" alt="web demo" width="500">
+  <img src="https://raw.githubusercontent.com/ninest/craftpainting/master/images/cpweb.png" alt="web demo" width="700">
 </p>
 
 *Note: the website is hosted on Heroku on the free plan, so it will take around 10 seconds to load.*
@@ -136,7 +155,7 @@ python test.py
 ## 📜 License
 - MIT
 - Sunset Dense taken from [Minecraft Gamepedia](https://minecraft.gamepedia.com/Painting)
-- Some images taken from [Pexels](https://www.pexels.com/)
+- Other images taken from [Pexels](https://www.pexels.com/)
 
 <!-- ## 🔖 Legal attribution -->
 <!-- Google Play and the Google Play logo are trademarks of Google LLC. -->

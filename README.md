@@ -150,6 +150,22 @@ pipenv install
 python test.py
 ```
 
+### Web
+```bash
+cd web/
+pipenv shell
+pipenv install
+
+# run the site on the dev server
+python app.py
+
+# host on heroku
+git add .
+git commit -m "update site"
+cd ..  # go to the route directory
+git subtree push --prefix web heroku master
+```
+
 <!-- ## 😱 Issues and limitations -->
 
 ## 📜 License

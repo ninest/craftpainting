@@ -27,7 +27,7 @@ def create_painting(image, size=None, gray=False, border=True):
     image_width, image_height = image.size
     ratio = image_width / image_height
 
-    print(ratio)
+    # print(ratio)
 
     if ratio > 1.33:
       size = (2, 1)

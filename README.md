@@ -166,7 +166,11 @@ cd ..  # go to the route directory
 git subtree push --prefix web heroku master
 ```
 
-<!-- ## 😱 Issues and limitations -->
+## ♥️ Support
+If you liked this project, consider supporting by
+- ⭐️ Starring the repository
+- 🎒 Checking out my other [projects](https://github.com/ninest)
+- ☕️ Buying me [coffee](https://www.buymeacoffee.com/ninest)
 
 ## 📜 License
 - MIT

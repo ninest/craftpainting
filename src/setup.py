@@ -5,7 +5,7 @@ with open('../README.md') as readme_file:
 
 setuptools.setup(
     name='craftpainting',
-    version='0.0.2',
+    version='0.0.3',
     packages=setuptools.find_packages(),
     entry_points={
       'console_scripts': [
@@ -23,3 +23,8 @@ setuptools.setup(
     description='Create Minecraft-like paintings',
     long_description=readme,
 )
+
+'''
+python3 setup.py sdist bdist_wheel
+python3 -m twine upload dist/*
+'''

@@ -8,7 +8,7 @@
       <!-- image upload -->
       <div>
         <!-- <label for="image">Image</label> -->
-        <input type="file" name="image" required>
+        <input type="file" name="image" accept="image/*" required>
       </div>
     </section>
     
@@ -16,13 +16,13 @@
       <h2>Size</h2>
       <p>Enter the size in <b>Minecraft blocks</b>. If left empty, we'll try to guess an appropriate value for you!</p>
       <!-- image width -->
-      <div>
+      <div class="grid">
         <label class="size" for="width">Width</label>
         <input name="width" type="number">
       </div>
 
       <!-- image height -->
-      <div>
+      <div class="grid">
         <label class="size" for="height">Height</label>
         <input name="height" type="number">
       </div>

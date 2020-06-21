@@ -16,4 +16,18 @@ body {
 }
 
 
+header {
+  // display: flex;
+  // justify-content: space-between;
+  // align-items: center;
 
+  .buttons {
+    a {
+      text-decoration: none;
+      font-weight: 600;
+    }
+    a + a {
+      margin-left: 1em;
+    }
+  }
+}

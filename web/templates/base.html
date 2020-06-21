@@ -16,9 +16,29 @@
 </head>
 <body>
   <main>
-    <h1 class="fancy-font">Craftpainting</h1>
+    <header>
+      <h1 class="fancy-font">Craftpainting</h1>
+      <div class="buttons">
+        <a href="https://github.com/ninest/craftpainting">GitHub</a>
+        <a id="shareButton" href="#">Share</a>
+      </div>
+    </header>
     {% block body %}{% endblock %}
   </main>
+  <script>
+    const $shareButton = document.getElementById('shareButton')
+
+    $shareButton.onclick = async () => {
+      if (navigator.canShare) {
+        await navigator.share({
+          title: 'craftpainting',
+          url: 'https://craftpainting.herokuapp.com/'
+        })
+      } else {
+        alert("Sorry, but your browser cannot perform this action.")
+      }
+    }
+  </script>
   {% block scripts %}{% endblock %}
 </body>
 </html>

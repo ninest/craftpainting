@@ -10,20 +10,37 @@ main {
   h1 {
     font-size: 1.5em;
     font-family: $fancy-font;
+    text-decoration: underline;
+    @include mobile-screen {
+      font-size: 1.1em;
+    }
   }
 
   section {
     p {
       color: rgba(0, 0, 0, 0.7);
     }
-    
+
     div {
       margin-top: 0.7em;
       label {
         font-weight: 400;
         &.size {
-          display: inline-block;
+          // display: inline-block;
+          // width: 6em;
+        }
+      }
+
+      &.grid {
+        display: flex;
+        label {
           width: 6em;
+        }
+
+        @include mobile-screen {
+          input {
+            width: 100%;
+          }
         }
       }
     }

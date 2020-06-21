@@ -14,7 +14,7 @@ assets = Environment(app)
 assets.url = app.static_url_path
 assets.debug = True
 
-scss = Bundle('sass/main.scss','sass/form.scss', 'sass/inputs.scss', filters='pyscss', output='gen/all.css')
+scss = Bundle('sass/main.scss', 'sass/form.scss', 'sass/created.scss', 'sass/inputs.scss', filters='pyscss', output='gen/all.css')
 assets.register('scss_all', scss)
 
 
@@ -36,10 +36,14 @@ def create():
   else:
     size = (int(width), int(height))
 
-  if "on" in gray: gray = True
-  else: gray = False
-  if "on" in frame: frame = True
-  else: frame = False
+  if "on" in gray:
+    gray = True
+  else:
+    gray = False
+  if "on" in frame:
+    frame = True
+  else:
+    frame = False
 
   image_from_form = request.files['image']
   image = Image.open(image_from_form)

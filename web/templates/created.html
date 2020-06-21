@@ -1,4 +1,32 @@
-<body>
-  <h1> Here: </h1>
-  <img src="data:image/format;base64,{{ image_b64 }}" alt="">
-</body>
+{% extends "base.html" %}
+
+{% block body %}
+<div class="output">
+  <div>
+    <img src="data:image/format;base64,{{ image_b64 }}" alt="image generated">
+  </div>
+
+  <div class="buttons">
+    <a class="button" href="data:image/format;base64,{{ image_b64 }}" download="craftpainting.png">Download</a>
+    <!-- <button id="share">Share</button> -->
+    <div class="back"><a class="button outline" href="/">Create another</a></div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+  const $share = document.getElementById('share');
+
+  $share.onclick = async () => {
+    const files = ["data:image/format;base64,{{ image_b64 }}"]
+    if (navigator.canShare && navigator.canShare({ files: files }))
+      await navigator.share({
+        title: 'Craftpainting',
+        url: 'https://craftpainting.herokuapp.com/'
+      });
+    else alert("Cannot share with this browser. Please download the image.");
+  }
+
+</script>
+{% endblock%}

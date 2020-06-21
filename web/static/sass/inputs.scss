@@ -11,12 +11,28 @@ input[type="number"] {
   }
 }
 
-button {
-  font-family: $fancy-font;
+button, a.button {
+
   margin-top: 1em;
-  background-color: black;
-  color: white;
-  padding: 0.5em 1em;
+  font-family: $fancy-font;
+  font-size: 0.8em;
   font-weight: 600;
-  border: none;
+
+  color: white;
+  text-decoration: none;
+  padding: 0.7em 1.7em;
+
+  background-color: rgb(49, 49, 49);
+
+  border: 2px solid black;
+
+  &.outline {
+    background-color: unset;
+    color: rgb(49, 49, 49);
+
+  }
+
+  &:hover {
+    border: 2px solid blue;
+  }
 }
